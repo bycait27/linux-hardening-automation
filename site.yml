@@ -1,6 +1,8 @@
+---
+
 - name: Apply Baseline Configuration and Hardening to Linux Infrastructure
   hosts: ubuntuservers
-  become: true
+  become: true # Run as sudo
   roles:
     - common
     - users
