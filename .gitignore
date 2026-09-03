@@ -1,0 +1,20 @@
+# OS generated files
+
+.DS_Store
+Thumbs.db
+
+# Private SSH keys and certificates
+
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Ansible and local state
+
+*.retry
+*.log
+.ansible/
+
+# Personal notes for reference
+notes.md

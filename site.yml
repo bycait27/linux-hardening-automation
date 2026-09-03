@@ -1,0 +1,9 @@
+- name: Apply Baseline Configuration and Hardening to Linux Infrastructure
+  hosts: ubuntuservers
+  become: true
+  roles:
+    - common
+    - users
+    - ssh
+    - firewall
+    - fail2ban
