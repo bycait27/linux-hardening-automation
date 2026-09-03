@@ -3,11 +3,13 @@
   ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 3600
+    lock_timeout: 300
 
 - name: Upgrade all packages to latest version
   ansible.builtin.apt:
     dpkg_options: "force-confdef,force-confold" # Bypass user input 
     upgrade: dist
+    lock_timeout: 300
 
 - name: Install essential baseline packages
   ansible.builtin.apt:
@@ -18,6 +20,7 @@
       - git
       - net-tools
     state: present
+    lock_timeout: 300
 
 - name: Set system timezone to UTC
   community.general.timezone:
